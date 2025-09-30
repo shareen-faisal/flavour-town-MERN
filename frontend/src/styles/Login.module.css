@@ -1,0 +1,152 @@
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.formSection {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%; /* full width */
+  box-sizing: border-box;
+}
+
+.passwordRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.inputGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: #fbbf24;
+  color: black;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #f59e0b;
+}
+
+.or {
+  text-align: center;
+  margin: 5px 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.footerText {
+  font-size: 14px;
+  text-align: center;
+}
+
+.footerText span {
+  color: #fbbf24;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.imageSection {
+  flex: 1;
+  background: url("../assets/login.png") no-repeat center center/cover;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3; /* Light gray */
+  border-top: 3px solid #000; /* Black (spinner color) */
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 0.8s linear infinite;
+  margin: auto; /* Center inside button */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* 📱 Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .imageSection {
+    display: none;
+  }
+
+  .formSection {
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .row {
+    flex-direction: column; /* City and Area stack */
+    gap: 12px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .formSection {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .form {
+    gap: 14px;
+  }
+}

@@ -1,0 +1,198 @@
+/* Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1000;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background: #fff;
+    width: 400px;
+    max-width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    animation: slideIn 0.3s ease;
+    overflow-x: hidden;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .headerActions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .clearBtn {
+    color: #f59e0b;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .closeBtn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+  }
+  /* Items */
+  .items {
+    flex: 1;
+    overflow-y: auto;
+    margin: 20px 0;
+  }
+  .item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+  .itemImage {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .itemInfo h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .itemInfo p {
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    color: #666;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    max-height: 3.4em;
+    line-height: 1.7em; 
+    }
+
+  .controls {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .quantityControls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .quantityControls button {
+    padding: 4px 8px;
+    border: none;
+    background: #fbbf24;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .deleteBtn {
+    background: none;
+    color: black; 
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .footer {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+  }
+  .totalRow,
+  .totalRowBold {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  .totalRowBold {
+    font-weight: bold;
+  }
+  .checkoutBtn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: #fbbf24;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .checkoutBtn:hover {
+    background-color: #f59e0b;
+  }
+
+  /* Addons */
+.addonList {
+  list-style: none;   /* removes dots */
+  padding: 0;
+  margin: 5px 0 0 0;  /* little spacing */
+}
+
+.addonItem {
+  font-size: 0.85rem;
+  color: #666;        /* grey color */
+  margin-left: 5px;   /* slight indent under product */
+}
+
+
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 90%;
+      max-width: 90%;
+      padding: 15px;
+      border-radius: 0;
+    }
+    .item {
+      flex-direction: row;
+      align-items: center;
+    }
+    .itemImage {
+      width: 60px;   
+      height: 60px;
+      flex-shrink: 0;
+    }
+    .controls {
+      justify-content: space-between;
+    }
+    .checkoutBtn {
+      font-size: 1rem;
+      padding: 14px;
+    }
+
+    .addonItem {
+      font-size: 0.8rem;
+    }
+    
+  }
+  
